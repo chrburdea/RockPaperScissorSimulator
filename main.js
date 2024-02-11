@@ -336,7 +336,6 @@ class QuadTree {
     }
 
     subdivide(){
-        console.log("subdivide");
         this.subdivided = true;
         this.northwest = new QuadTree(this.x, this.y, this.width / 2, this.height / 2, this.capacity);
         this.northeast = new QuadTree(this.x + this.width / 2, this.y, this.width / 2, this.height / 2, this.capacity);
@@ -355,7 +354,7 @@ class QuadTree {
 
     insert(element){
         
-        console.log("isWithinTree: ", this.id, this.isWithinTree(element));
+        // console.log("isWithinTree: ", this.id, this.isWithinTree(element));
         // If the element is not within boundaries, refuse insertion
         if (!this.isWithinTree(element)){
             return;
@@ -364,7 +363,7 @@ class QuadTree {
         //if qT has capacity insert it
         if (this.points.length < this.capacity) { 
             this.points.push(element);
-            console.log("Inserted at: ", this.id);
+            // console.log("Inserted at: ", this.id);
             return true;
         } else {
             //if no capacity, create more trees and insert there
@@ -381,7 +380,7 @@ class QuadTree {
     query(x,y,w,h){
         let found = [];
         if (!detectOverlap(x,y,w,h,this.x,this.y,this.width,this.width)){
-            console.log("no elements within searching range");
+            // console.log("no elements within searching range");
             return found;
         } else {
             for (let elem of this.points){
