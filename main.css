@@ -1,0 +1,35 @@
+#window{
+    /*border-style: dashed;*/
+}
+
+#drawingCanvas{
+    background-color: black;
+}
+
+
+
+#controlPanel #slideContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+#controlPanel #controlContainer{
+    /*border-style: dashed; */
+    margin: 0;
+    display: flex;
+}
+
+#populationRangeSlider {
+    width: 250px;
+    padding: 5px;
+}
+
+#controlPanel button{
+    width: 200;
+    height: 40;
+    margin: 0;
+    padding: 0;
+
+}
